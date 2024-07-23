@@ -162,12 +162,15 @@ def get_answer(query, course, model_choice, search_type):
     else:
         search_results = elastic_search_text(query, course)
 
+    print(f'query: {query}, model_choice: {model_choice}, search_type: {search_type}')
     prompt = build_prompt(query, search_results)
     answer, tokens, response_time = llm(prompt, model_choice)
     
-    relevance, explanation, eval_tokens = evaluate_relevance(query, answer)
+    # relevance, explanation, eval_tokens = evaluate_relevance(query, answer)
+    relevance, explanation, eval_tokens = "none", "none", {'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}
 
-    openai_cost = calculate_openai_cost(model_choice, tokens)
+    # openai_cost = calculate_openai_cost(model_choice, tokens)
+    openai_cost = 0
  
     return {
         'answer': answer,
