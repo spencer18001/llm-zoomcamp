@@ -85,13 +85,13 @@ def index_documents(es_client, documents, model):
 
 
 def main():
-    # print("Starting the indexing process...")
+    print("Starting the indexing process...")
 
-    # documents = fetch_documents()
-    # ground_truth = fetch_ground_truth()
-    # model = load_model()
-    # es_client = setup_elasticsearch()
-    # index_documents(es_client, documents, model)
+    documents = fetch_documents()
+    ground_truth = fetch_ground_truth()
+    model = load_model()
+    es_client = setup_elasticsearch()
+    index_documents(es_client, documents, model)
 
     print("Initializing database...")
     init_db()
