@@ -19,6 +19,7 @@
         - \conninfo: 顯示當前連接的數據庫信息
         - \dt: 列出所有表
     ```shell
+    pip install pgcli
     pgcli postgres://your_username:your_password@localhost/course_assistant
     ```
 - 前置作業:
