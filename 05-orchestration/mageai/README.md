@@ -1,6 +1,6 @@
 #### Module overview
 - Overview > New pipeline > Retrieval Argumented Generation
-- Pipelines > 右鍵點 pipeline > OPen pipeline
+- Pipelines > 右鍵點 pipeline > Open pipeline
 
 #### Ingest
 - Data preparation > Load > Ingest > Add block > API Data Loader
@@ -16,7 +16,6 @@
 - Transform > Tokenization > Add block > Lemmatization (spaCy) > Edit
 	- 貼上 05-orchestration/mageai/llm/rager/transformers/vivid_nexus.py 的程式碼 (印出 progress)
 	- Run
-
 ```shell
 pip install spacy
 python -m spacy download en_core_web_sm
